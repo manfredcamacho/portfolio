@@ -41,7 +41,7 @@ hr{
 
 .page-wrapper{
 	min-height: 100vh;
-	background: url("../img/background-5.jpg") no-repeat top center fixed;
+	background: url("../img/background.jpg") no-repeat top center fixed;
 	background-size: cover;
 }
 
@@ -106,7 +106,7 @@ hr{
 }
 
 .about-me__title{
-	font-size: 1.8em;
+	font-size: 1em;
 }
 
 .about-me__avatar{
@@ -158,13 +158,35 @@ hr{
 	font-size: 4em;
 }
 
+.work-experience__companies, .projects__content{
+	display: flex;
+	flex-direction: column;
+	margin: 30px auto;
+}
+
+.work-experience__company, .projects__project{
+	margin: 30px;
+	max-width: 300px;
+}
+
+.work-experience__logo img, .projects__thumbnail img{
+	width: 100%;
+}
+
+.work-experience__date, .projects__description{
+	margin-top: 10px;
+	text-align: center;
+}
+
 .projects, .footer{
 	background-color: #222831;
 	color: #f5f5f5;
 }
 
-.projects{
-	
+.projects__thumbnail{
+	border: 1px solid #ff6347;
+	border-radius: 5px;
+	background-color: #e6e6e6;
 }
 
 .contact-me__title{
@@ -222,6 +244,7 @@ hr{
 
 .footer__copyright{
 	margin: 30px 0;
+	text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -258,7 +281,15 @@ hr{
 	}
 
 	.about-me__title{
-		font-size: 3em;
+		font-size: 2em;
+	}
+
+	.work-experience__companies, .projects__content{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
 	}
 }
 
@@ -267,5 +298,7 @@ hr{
 }
 
 @media only screen and (min-width: 1025px) {
-
+	.about-me__title{
+		font-size: 3em;
+	}
 }
