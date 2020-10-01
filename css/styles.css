@@ -39,6 +39,10 @@ hr{
 	margin: 30px 0;
 }
 
+.hide{
+	display: none;
+}
+
 .page-wrapper{
 	min-height: 100vh;
 	background: url("../img/background.jpg") no-repeat top center fixed;
@@ -92,10 +96,6 @@ hr{
   color: #ffffff;
 }
 
-.menu__items, .menu__close{
-	display: none;
-}
-
 .about-me{
 	display: flex;
 	flex-grow: 1;
@@ -106,7 +106,7 @@ hr{
 }
 
 .about-me__title{
-	font-size: 1em;
+	font-size: 1.5em;
 }
 
 .about-me__avatar{
@@ -250,6 +250,10 @@ hr{
 @media only screen and (min-width: 768px) {
   .content-wrapper{
 		max-width: 1280px;
+	}
+
+	.menu__items{
+		height: auto;
 	}
 
 	.menu ul{

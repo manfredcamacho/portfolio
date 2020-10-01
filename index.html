@@ -12,9 +12,8 @@
   <div class="page-wrapper">
 		<header id="home" class="header full-page-container">
 				<nav class="menu">
-					<div class="menu__icon"><a href="#"><i class="fas fa-bars"></i></a></div>
-					<div class="menu__close"><a href="#"><i class="fas fa-times"></i></a></div>
-					<div class="menu__items">
+					<div class="menu__icon"><a href="#" onclick="toggle()" ><i id="menu-icon" class="fas fa-bars"></i></a></div>
+					<div id="menu-items" class="menu__items hide">
 						<ul>
 							<li><a class="menu__item" href="#home">SOBRE MI</a></li>
 							<li><a class="menu__item" href="#work-experience">EXPERIENCIA LABORAL</a></li>
@@ -240,6 +239,7 @@
 				</div>
 			</div>
 		</footer>
-  </div>
+	</div>
+	<script src="js/scripts.js" type="text/javascript"></script>
 </body>
 </html>
