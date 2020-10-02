@@ -45,7 +45,7 @@ hr{
 
 .page-wrapper{
 	min-height: 100vh;
-	background: url("../img/background-x.jpg") no-repeat top center fixed;
+	background: url("../img/background.jpg") no-repeat top center fixed;
 	background-size: cover;
 }
 
