@@ -1,56 +1,56 @@
 /*  MOBILE FIRST 
-*		BEM notation
+*    BEM notation
 */
 
 *{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /*Avoid blue background button on mobile*/
 }
 
 html{
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body{
-	background-color: #222831;
- font-family: 'Encode Sans Expanded', sans-serif;
-
- color: #f0ffff;
+  background-color: #222831;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  color: #f0ffff;
 }
 
 a{
-	text-decoration: none;
-	color: #ff6347;
+  text-decoration: none;
+  color: #ff6347;
 }
 
 a:hover{
-	color: #f72c08;
+  color: #f72c08;
 }
 
 h2{
-	text-align: center;
-	font-size: 2em;
-	font-weight: 300;
+  text-align: center;
+  font-size: 2em;
 }
 
 hr{
-	width:50%;
-	margin: 30px 0;
+  width:50%;
+  margin: 30px 0;
 }
 
 .hide{
-	display: none;
+  display: none;
 }
 
 .page-wrapper{
-	min-height: 100vh;
-	background: url("../img/background.jpg") no-repeat top center fixed;
-	background-size: cover;
+  min-height: 100vh;
+  background: url("../img/background.jpg") no-repeat top center fixed;
+  background-size: cover;
 }
 
 .full-page-container{
   min-height: 100vh;
+  max-width: 100vw;
   width: 100%;
 }
 
@@ -60,46 +60,45 @@ hr{
 	flex-direction: column; 
 	align-items: center;
 	margin: 0 auto;
-	padding: 50px 30px;
+  padding: 50px 30px;
 }
+
 
 .header{
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
 
 .menu{
-	position: fixed;
-	background-color: rgba(34, 40, 49, 1);
-	top: 0;
-	width: 100%;
-}
-
-.menu__items{
-	height: 100vh;
+  position: fixed;
+  background-color: rgba(34, 40, 49, 1);
+  top: 0;
+  width: 100vw;
 }
 
 .menu ul{
-	list-style: none;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 89vh;
+  justify-content: center;
 }
 
 .menu__item, .menu__icon, .menu__close{
-	display: flex;
-	flex-basis: 100%;
-	justify-content: center;
-	align-items: center;
-	color: #f5f5f5;
-  height: 7vh;
-  border-bottom: 1px solid #353535;;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #f5f5f5;
+  height: 11vh;
 }
 
 .menu__icon, .menu__close{
-	color: #ff6347;
-	font-size: 2em;
-	justify-content: flex-end;
-	border-bottom: 0;
-	height: auto;
-	margin: 20px 20px 10px 0;
+  font-size: 2em;
+  color: #ff6347;
+  justify-content: flex-end;
+  padding-right: 4vw;
 }
 
 .menu__item:hover {
@@ -108,212 +107,240 @@ hr{
 }
 
 .menu__icon:hover , .menu__close:hover{
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .about-me{
-	display: flex;
-	flex-grow: 1;
+  flex-grow: 1;
 }
 
 .about-me .content-wrapper{
-	justify-content: center;
+  justify-content: center;
+  margin-top: 7vh; /* Menu Height*/
 }
 
 .about-me__title{
-	font-size: 1.2em;
+  text-align: center;
+  font-size: 3vh;
 }
 
 .about-me__avatar{
-	margin: 30px auto;
+  margin: 30px auto;
 }
 
 .about-me__avatar img{
   background-color: #f5f5f5;
   border: 5px solid #ff6347;
   border-radius: 100vh;
+  width: 100%;
 }
 
 .about-me__content{
-	text-align: center;
-	margin: 30px auto;
+  text-align: center;
+  margin: 30px auto;
 }
 
 .about-me__content p{
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .about-me__social-media{
-	margin: 30px auto;
+  margin: 30px auto;
 }
 
 .about-me__social-media ul, .footer__social-media ul{
-	list-style: none;
-	display: flex;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .about-me__social-media-item, .footer__social-media-item{
-	margin: 0px 20px;
-	font-size: 2em;
-	color: #ff6347;
+  margin: 0px 10px;
+  font-size: 6vh;
+  color: #ff6347;
 }
 
 .contact-me, .work-experience{
-	background-color: #f5f5f5;
-	color: #222831;
+  background-color: #f5f5f5;
+  color: #222831;
 }
 
 .work-experience__title{
-	margin: 30px auto;
+  margin: 30px auto;
 }
 
 .work-experience__tech-stack{
-	margin: 30px auto;
-	text-align: center;
-	font-size: 4em;
+  margin: 30px auto;
+  text-align: center;
+  font-size: 4em;
 }
 
 .work-experience__companies, .projects__content{
-	display: flex;
-	flex-direction: column;
-	margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
 }
 
 .work-experience__company, .projects__project{
-	margin: 30px;
-	max-width: 300px;
+  max-width: 300px;
+  margin: 30px auto;
 }
 
 .work-experience__logo img, .projects__thumbnail img{
-	width: 100%;
+  width: 100%;
 }
 
 .work-experience__date, .projects__description{
-	margin-top: 10px;
-	text-align: center;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .projects, .footer{
-	background-color: #222831;
-	color: #f5f5f5;
+  background-color: #222831;
+  color: #f5f5f5;
 }
 
 .projects__thumbnail{
-	border: 1px solid #ff6347;
-	border-radius: 5px;
-	background-color: #e6e6e6;
+  border: 1px solid #ff6347;
+  border-radius: 5px;
+  background-color: #e6e6e6;
 }
 
 .contact-me__title{
-	padding-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+.contact-me__form-map-wrapper{
+  width: 100%;
 }
 
 .contact-me__map{
-	padding-bottom: 30px;
-	width: 100%;
+  padding-bottom: 30px;
+  width: 100%;
 }
 
 .contact-me__form{
-	width: 100%;
+  width: 100%;
 }
 
 .contact-me__form input, .contact-me__form label,
 .contact-me__form button, .contact-me__form textarea{
-	display: block;
-	width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .contact-me__form input, .contact-me__form textarea{
-	height: 3em;
-	font-size: 1em;
-	margin-bottom: 2em;
-	padding: 5px;
-	border: 1px solid dimgray;
-	border-radius: 5px;
+  height: 3em;
+  font-size: 1em;
+  margin-bottom: 2em;
+  padding: 10px;
+  border: 1px solid dimgray;
+  border-radius: 5px;
 }
 
 .contact-me__form input:focus , .contact-me__form textarea:focus{
-	outline: none;
-	border: 1px solid #f72c08;
+  outline: none;
+  border: 1px solid #f72c08;
 }
 
 .contact-me__form textarea{
-	height: 10em;
-	resize: none;
+  height: 10em;
+  resize: none;
 }
 
 .contact-me__form button{
-	background-color: #ff6347;
-	border: 1px solid #ff6347;
-	border-radius: 5px;
-	color: #f5f5f5;
-	height: 3em;
-	font-size: 1em;
-	cursor: pointer;
+  background-color: #ff6347;
+  border: 1px solid #ff6347;
+  border-radius: 5px;
+  color: #f5f5f5;
+  height: 3em;
+  font-size: 1em;
+  cursor: pointer;
 }
 
 .contact-me__form button:hover{
-	background-color: #f72c08;
-	border: 1px solid #f72c08;
+  background-color: #f72c08;
+  border: 1px solid #f72c08;
 }
 
 .footer__copyright{
-	margin: 30px 0;
-	text-align: center;
+  margin: 30px 0;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
   .content-wrapper{
-		max-width: 1280px;
-	}
+    max-width: 1280px;
+  }
 
-	.menu__items{
-		height: auto;
-		display: block;
-		margin: 20px auto;
-	}
+  .menu__items{
+    height: auto;
+    display: block;
+    margin: 20px auto;
+  }
 
-	.menu ul{
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-	}
-	.menu__icon, .menu__close{
-		display: none
-	}
+  .menu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+  }
 
-	.menu__item{
-		border: 0;
-		margin: 0 20px;
-		height: auto;
-		font-weight: bold;
-		font-size: 14PX;
-	}
+  .menu__icon, .menu__close{
+    display: none
+  }
 
-	.menu__item:hover{
-		color: #ff6347;
-		background-color: transparent;
-	}
+  .menu__item{
+    border: 0;
+    margin: 0 20px;
+    height: auto;
+    font-weight: bold;
+    font-size: 14PX;
+  }
 
-	.about-me__title{
-		font-size: 2em;
-	}
+  .menu__item:hover{
+    color: #ff6347;
+    background-color: transparent;
+  }
 
-	.work-experience__companies, .projects__content{
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		flex-wrap: wrap;
-	}
+  .about-me__title{
+    font-size: 2em;
+  }
+
+  .work-experience__companies, .projects__content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .work-experience__company, .projects__project{
+    margin: 30px 30px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-
+  /* Nothing for now*/
 }
 
 @media only screen and (min-width: 1025px) {
-	.about-me__title{
-		font-size: 3em;
-	}
+  .about-me__title{
+    font-size: 3em;
+  }
+
+  .contact-me__form-map-wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+
+  }
+
+  .contact-me__map, 
+  .contact-me__form{
+    margin: 0 30px;
+    padding: 0;
+  }
+
+
 }
