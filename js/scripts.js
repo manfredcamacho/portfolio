@@ -1,9 +1,9 @@
-var menu = document.getElementById("menu-items");
+var menuItems = document.getElementById("menu-items");
 var menuIcon = document.getElementById("menu-icon");
 
 
 const toggle = () => {
   menuIcon.classList.toggle("fa-bars");
   menuIcon.classList.toggle("fa-times");
-  menu.classList.toggle("hide");
+  menuItems.classList.toggle("hide");
 }
