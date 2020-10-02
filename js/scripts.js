@@ -7,3 +7,8 @@ const toggle = () => {
   menuIcon.classList.toggle("fa-times");
   menuItems.classList.toggle("hide");
 }
+
+const closeMenu = () => {
+  if(menuIcon.classList.contains("fa-times"))
+    toggle();
+}
