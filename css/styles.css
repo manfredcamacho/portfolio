@@ -74,7 +74,11 @@ hr{
   position: fixed;
   background-color: rgba(34, 40, 49, 1);
   top: 0;
-  width: 100vw;
+  right: 0;
+  width: auto;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 50%;
 }
 
 .menu ul{
@@ -98,7 +102,7 @@ hr{
   font-size: 2em;
   color: #ff6347;
   justify-content: flex-end;
-  padding-right: 4vw;
+  height: auto;
 }
 
 .menu__item:hover {
@@ -110,42 +114,57 @@ hr{
   cursor: pointer;
 }
 
+.menu.active{
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  transition: all 50ms ease-in-out;
+}
+
+.menu.active .menu__icon{
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
 .about-me{
+  display: flex;
   flex-grow: 1;
 }
 
 .about-me .content-wrapper{
   justify-content: center;
-  margin-top: 7vh; /* Menu Height*/
 }
 
 .about-me__title{
   text-align: center;
-  font-size: 3vh;
+  font-size: 1.3em;
+  margin: 0 auto 60px auto;
 }
 
 .about-me__avatar{
-  margin: 30px auto;
+  margin: 0 auto 60px auto;
 }
 
 .about-me__avatar img{
   background-color: #f5f5f5;
   border: 5px solid #ff6347;
-  border-radius: 100vh;
+  border-radius: 50%;
   width: 100%;
 }
 
 .about-me__content{
   text-align: center;
-  margin: 30px auto;
+  margin: 0 auto 60px auto;
 }
 
 .about-me__content p{
   margin-bottom: 20px;
 }
 
-.about-me__social-media{
-  margin: 30px auto;
+.about-me__content p:last-child{
+  margin-bottom: 0;
 }
 
 .about-me__social-media ul, .footer__social-media ul{
@@ -274,6 +293,14 @@ hr{
     max-width: 1280px;
   }
 
+  .menu, .menu.active{
+    width: 100vw;
+    height: auto;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+  }
+
   .menu__items{
     height: auto;
     display: block;
@@ -301,6 +328,11 @@ hr{
 
   .menu__item:hover{
     color: #ff6347;
+    background-color: transparent;
+  }
+
+  .menu__item.selected{
+    border-bottom: 4px solid #ff6347;
     background-color: transparent;
   }
 
