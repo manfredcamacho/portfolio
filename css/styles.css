@@ -140,7 +140,7 @@ hr{
 .about-me__title{
   text-align: center;
   font-size: 1.3em;
-  margin: 0 auto 60px auto;
+  margin: 2em auto 60px auto;
 }
 
 .about-me__avatar{
@@ -338,6 +338,7 @@ hr{
 
   .about-me__title{
     font-size: 2em;
+    margin-top: 0;
   }
 
   .work-experience__companies, .projects__content{
